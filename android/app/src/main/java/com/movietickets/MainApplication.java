@@ -14,11 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainApplication extends NavigationApplication {
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
-  }
+ 
 
   @Override
   public boolean isDebug() {
@@ -36,6 +32,10 @@ public class MainApplication extends NavigationApplication {
   public List<ReactPackage> createAdditionalReactPackages() {
     return getPackages();
   }
-
+  
+  @Override
+  public String getJSMainModuleName() {
+      return "index";
+  }
 
 }
